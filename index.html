@@ -118,7 +118,49 @@ transform:translateY(110vh);
   object-fit: cover;
   object-position: center 70%;
 }
+#prayers{
+display:none;
+text-align:center;
+animation:muncul 1s ease;
+}
 
+.bubble{
+position:absolute;
+padding:15px 20px;
+border-radius:30px;
+background:linear-gradient(to bottom,#ffffff,#ffd6e8);
+box-shadow:0 5px 15px #ffc1dc;
+color:#666;
+max-width:220px;
+animation:gerak 5s ease-in-out infinite;
+}
+
+@keyframes gerak{
+0%{
+transform:translateY(0px) translateX(0px);
+}
+25%{
+transform:translateY(-10px) translateX(8px);
+}
+50%{
+transform:translateY(0px) translateX(-8px);
+}
+75%{
+transform:translateY(10px) translateX(5px);
+}
+100%{
+transform:translateY(0px) translateX(0px);
+}
+}
+
+.b1{top:18%;left:8%;}
+.b2{top:30%;right:10%;}
+.b3{top:48%;left:6%;}
+.b4{top:62%;right:8%;}
+.b5{top:22%;left:35%;}
+.b6{top:42%;right:35%;}
+.b7{top:68%;left:35%;}
+.b8{top:82%;right:28%;}
 </style>
 
 </head>
@@ -180,7 +222,7 @@ Tempat kecil yang aku buat khusus untuk kamu.
 </div>
 
 
-<div class="card">
+<div class="card" onclick="bukaPrayers()">
 🤲 Prayers
 </div>
 
@@ -225,7 +267,26 @@ Makasih yaa sayang, karena selalu ada buat aku. Aku bersyukur banget bisa dipert
 </button>
 
 </div>
+<div id="prayers" style="display:none;">
 
+<h2>🤲 Prayers 🤍</h2>
+
+<p>Semua doa kecil ini selalu untukmu. 🤍</p>
+
+<div class="bubble b1">07•10•25 🤍</div>
+<div class="bubble b2">Sehat selalu ya, sayang.</div>
+<div class="bubble b3">Aku sayang kamu.</div>
+<div class="bubble b4">Semoga semua impianmu satu per satu tercapai.</div>
+<div class="bubble b5">Jangan lupa istirahat kalau capek.</div>
+<div class="bubble b6">Semoga hari-harimu selalu dipenuhi hal baik.</div>
+<div class="bubble b7">Aku akan selalu mendoakan yang terbaik untukmu.</div>
+<div class="bubble b8">Terima kasih sudah hadir di hidupku.</div>
+
+<button onclick="kembaliPrayers()">
+🤍 Kembali
+</button>
+
+</div>
 
 <script>
 
@@ -269,7 +330,32 @@ document.getElementById("memories").style.display="none";
 document.getElementById("halaman2").style.display="block";
 
   }
+  function kembaliMemories(){
+
+document.getElementById("memories").style.display="none";
+
+document.getElementById("halaman2").style.display="block";
+
+}
+
+function bukaPrayers(){
+
+document.getElementById("halaman2").style.display="none";
+
+document.getElementById("prayers").style.display="block";
+
+}
+
+function kembaliPrayers(){
+
+document.getElementById("prayers").style.display="none";
+
+document.getElementById("halaman2").style.display="block";
+
+}
+
 </script>
+
 
 <audio id="bgm" loop>
     <source src="lagu.mp3" type="audio/mpeg">
