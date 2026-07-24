@@ -156,9 +156,9 @@ Tempat kecil yang aku buat khusus untuk kamu.
 </p>
 
 
-<div class="card">
+<div class="card" onclick="bukaSurat()">
 💌 Letters
-</div>
+</div> 
 
 
 <div class="card">
@@ -172,7 +172,30 @@ Tempat kecil yang aku buat khusus untuk kamu.
 
 
 </div>
+<div id="surat" style="display:none; text-align:center; animation:muncul 1s ease;">
 
+<h1>💌 Untuk orang favoritku</h1>
+
+<div style="
+background:white;
+padding:25px;
+border-radius:20px;
+max-width:500px;
+margin:20px auto;
+box-shadow:0 5px 20px #ffc1dc;
+line-height:1.8;
+color:#666;
+">
+
+Makasih yaa sayang, karena selalu ada buat aku. Aku bersyukur banget bisa dipertemukan sama kamu. terima kasih sudah hadir di hari-hariku. aku juga berharap ke depannya kita bisa lebih baik lagi dan terus bertahan apa pun yang terjadi. I love you sayang.❤️
+
+</div>
+
+<button onclick="kembali()">
+🤍 Kembali
+</button>
+
+</div>
 
 
 <script>
@@ -188,7 +211,21 @@ document.getElementById("halaman1").style.display="none";
 document.getElementById("halaman2").style.display="block";
 
 }
+function bukaSurat(){
 
+document.getElementById("halaman2").style.display="none";
+
+document.getElementById("surat").style.display="block";
+
+}
+
+function kembali(){
+
+document.getElementById("surat").style.display="none";
+
+document.getElementById("halaman2").style.display="block";
+
+                        }
 </script>
 
 <audio id="bgm" loop>
