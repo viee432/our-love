@@ -161,7 +161,7 @@ Tempat kecil yang aku buat khusus untuk kamu.
 </div> 
 
 
-<div class="card">
+<div class="card" onclick="bukaMemories()">
 📸 Memories
 </div>
 
@@ -196,7 +196,17 @@ Makasih yaa sayang, karena selalu ada buat aku. Aku bersyukur banget bisa dipert
 </button>
 
 </div>
+<div id="memories" style="display:none;">
 
+<h2>📸 Our Memories 🤍</h2>
+
+<div class="camera">
+<img id="memoryPhoto" src="images/IMG-20260402-WA0018.jpg">
+</div>
+
+<p>Little moments that I will always remember ✨</p>
+
+</div>
 
 <script>
 
@@ -226,6 +236,13 @@ document.getElementById("surat").style.display="none";
 document.getElementById("halaman2").style.display="block";
 
                         }
+  function bukaMemories(){
+
+document.getElementById("halaman2").style.display="none";
+
+document.getElementById("memories").style.display="block";
+
+  }
 </script>
 
 <audio id="bgm" loop>
