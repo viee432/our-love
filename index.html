@@ -215,7 +215,15 @@ font-size:12px;
 
 
 
-<div class="container">
+<button>
+🌸 Start Our Story
+</button>
+
+
+</div>
+
+
+<script>
 
 <h1>
 🎀 For My Favorite Person 🎀
@@ -300,21 +308,26 @@ document.getElementById("halaman2").style.display="block";
 
 }
 
-</script>
-
-
-</div>
-
-
 <script>
 
+function masuk(){
+
+document.querySelector(".container").style.opacity="0";
+
+setTimeout(()=>{
+
+document.querySelector(".container").style.display="none";
 
 document.getElementById("halaman2").style.display="block";
 
+},800);
+
 }
 
-
 </script>
+
+
+
 
 
 </body>
