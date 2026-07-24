@@ -179,6 +179,10 @@ Tempat kecil yang aku buat khusus untuk kamu.
 
 function masuk(){
 
+const musik = document.getElementById("bgm");
+
+musik.play();
+
 document.getElementById("halaman1").style.display="none";
 
 document.getElementById("halaman2").style.display="block";
@@ -187,6 +191,9 @@ document.getElementById("halaman2").style.display="block";
 
 </script>
 
+<audio id="bgm" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
